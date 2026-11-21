@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f6f8fc">
+<meta name="description" content="TECHVERSE — an independent technology device encyclopedia. Explore device families, technical profiles and manufacturer references.">
+<title>TECHVERSE — Technology Encyclopedia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar"><a class="logo" href="#" aria-label="TECHVERSE home"><span class="logo-mark">T</span><span>TECH<span class="logo-light">VERSE</span></span></a>
+<nav><a href="#explore" data-i18n="navExplore">Explore</a><a href="#about" data-i18n="navAbout">About</a></nav>
+<div class="top-actions"><select id="language" aria-label="Language"><option value="en">EN</option><option value="ar">AR</option><option value="fr">FR</option></select><button id="themeBtn" class="icon-btn" aria-label="Toggle theme">◐</button></div></header>
+<main>
+<section class="hero"><div class="hero-copy"><div class="eyebrow"><span class="pulse"></span><span data-i18n="eyebrow">THE DIGITAL DEVICE ENCYCLOPEDIA</span></div>
+<h1 data-i18n="heroTitle">Explore the technology<br><em>that shapes our world.</em></h1>
+<p data-i18n="heroText">A growing reference library for phones, computers, gaming hardware, cameras and the devices around us.</p>
+<div class="hero-search"><span>⌕</span><input id="search" type="search" placeholder="Search a device, brand or model..." data-i18n-placeholder="searchPlaceholder"><kbd>ENTER</kbd></div>
+<div class="hero-stats"><div><strong id="deviceCount">900+</strong><span data-i18n="catalogued">catalogue entries</span></div><div><strong id="categoryCount">15</strong><span data-i18n="categories">categories</span></div><div><strong id="brandCount">—</strong><span data-i18n="brands">brands</span></div></div></div>
+<div class="hero-art"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="device-card phone"><div class="phone-screen"><div class="screen-glow"></div><span>TECH</span><b>01</b></div></div><div class="device-card laptop"><div class="laptop-screen"><div class="screen-lines"></div><span>DEVICE<br>DATABASE</span></div><div class="laptop-base"></div></div><div class="floating-chip chip-a">CPU / GPU</div><div class="floating-chip chip-b">01 — 900</div><div class="hero-cross">✳</div></div></section>
+<section class="explore" id="explore"><div class="section-heading"><div><div class="eyebrow muted" data-i18n="library">THE LIBRARY</div><h2 data-i18n="exploreTitle">Explore devices</h2><p data-i18n="exploreText">Browse the catalogue by category or search for a specific model.</p></div><div class="result-count"><strong id="resultCount">900</strong> <span data-i18n="results">results</span></div></div>
+<div class="toolbar"><div class="filters"><select id="categoryFilter"><option value="">All categories</option></select><select id="brandFilter"><option value="">All brands</option></select></div><div class="sort-wrap"><span data-i18n="sortBy">Sort by</span><select id="sort"><option value="az">A — Z</option><option value="za">Z — A</option><option value="brand">Brand</option></select></div></div>
+<div class="category-strip" id="categoryStrip"></div><div class="device-grid" id="deviceGrid"></div><div class="empty-state" id="emptyState" hidden><div>⌕</div><h3 data-i18n="noResults">No devices found</h3><p data-i18n="tryAgain">Try another search or category.</p></div>
+<div class="pagination"><button id="prevPage" class="page-btn">←</button><span id="pageLabel">Page 1</span><button id="nextPage" class="page-btn">→</button></div></section>
+<section class="about" id="about"><div class="about-icon">✳</div><div><div class="eyebrow muted" data-i18n="aboutEyebrow">ABOUT TECHVERSE</div><h2 data-i18n="aboutTitle">Knowledge, not a marketplace.</h2><p data-i18n="aboutText">TECHVERSE is an educational technology reference. It helps visitors discover device families and understand where to find reliable technical specifications. There are no carts, checkout flows or product sales.</p></div><div class="about-note"><span>01 / 03</span><b>Explore</b><span>02 / 03</span><b>Learn</b><span>03 / 03</span><b>Verify</b></div></section>
+</main><footer><a class="logo" href="#"><span class="logo-mark">T</span><span>TECH<span class="logo-light">VERSE</span></span></a><span>Independent technology encyclopedia · Created by Othman Lammallah</span><a href="#explore">Back to top ↑</a></footer>
+<div class="modal-backdrop" id="modal" hidden><article class="detail-modal"><button class="close-modal" id="closeModal" aria-label="Close">×</button><div class="detail-kicker" id="detailCategory">DEVICE PROFILE</div><h2 id="detailName"></h2><p id="detailSummary" class="detail-summary"></p><div class="detail-meta" id="detailMeta"></div><h3 data-i18n="technicalReference">Technical reference</h3><p class="detail-caution" data-i18n="specNotice">Specifications can vary by regional SKU and configuration. Use the manufacturer's exact model code to confirm technical values.</p><div class="spec-grid" id="specGrid"></div><a class="manufacturer-link" id="sourceLink" target="_blank" rel="noopener">Find manufacturer information ↗</a></article></div>
+<script src="devices.js"></script><script src="app.js"></script>
+</body></html>
